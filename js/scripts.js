@@ -8,14 +8,32 @@ function Ticket(title, time, age) {
 }
 
 Ticket.prototype.calculatePrice = function() {
-  // var basePrice = 5;
-  if (this.title === "Harry Potter" && this.time === "04:00 PM" && this.age === "adult") {
-    return "$5";
-  } else {
-    return "$3";
+  var basePrice = 11;
+  if (this.title === "Shazam" || this.title === "Hellboy") {
+    return basePrice += 2;
+
   }
+
+  if (this.time === "07:00 PM") {
+    return basePrice += 1;
+  }
+  if (this.age === "youth" || this.age === "senior") {
+    basePrice -= 1;
+  } else {
+    return basePrice;
+  }
+  return basePrice;
 }
 
+
+Ticket.prototype.show = function() {
+  return this.title + " " + this.time + " " + this.age + " ";
+}
+
+// Ticket.prototype.showAbout = function() {
+//   // var basePrice = 5;
+//   return "hhhghgh"
+// }
 
 
 // UI Logic
@@ -28,7 +46,10 @@ $(document).ready(function() {
       var inputTime = $("input:radio[name=time]:checked").val();
       var ticket = new Ticket(movieTitle, inputTime, inputAge);
       $("#price").text(ticket.calculatePrice());
-
+      $("ul").append("<li>" + ticket.title + "</li>");
+      $("ul").append("<li>" + ticket.time + "</li>");
+      $("ul").append("<li>" + ticket.age + "</li>");
+      // ticket.showAbout($("aboutplace"));
 
     });
 
