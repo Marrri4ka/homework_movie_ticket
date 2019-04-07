@@ -19,28 +19,47 @@
 
           <h2>Now showing</h2>
           <img src="img/shazam.jpg" alt="shazam-picture"><br><br>
-          <button class="btn btn-primary" type="click">Buy ticket</button>
+          <label>
+            <input type="radio" name="movie" value="Harry Potter" checked>
+            Harry Potter
+          </label>
+
+
 
         </div>
         <div class="col-md-3">
 
           <h2> </h2> <br> <br>
           <img src="img/shazam.jpg" alt="shazam-picture"><br><br>
-          <button class="btn btn-primary" type="click">Buy ticket</button>
+          <label>
+            <input type="radio" name="movie" value="01:00 PM" checked>
+            01:00 PM
+          </label>
 
         </div>
         <div class="col-md-3">
 
           <h2> </h2> <br><br>
           <img src="img/shazam.jpg" alt="shazam-picture"><br><br>
-          <button class="btn btn-primary" type="click">Buy ticket</button>
+          <label>
+            <input type="radio" name="movie" value="01:00 PM" checked>
+            01:00 PM
+          </label>
+
 
         </div>
         <div class="col-md-3">
 
           <h2> </h2> <br> <br>
           <img src="img/shazam.jpg" alt="shazam-picture"><br><br>
-          <button class="btn btn-primary" type="click">Buy ticket</button>
+          <label>
+            <input type="radio" name="movie" value="01:00 PM" checked>
+            01:00 PM
+          </label><br><br>
+
+        </div>
+        <div class="col-md-12">
+          <button id="buy-ticket" class="btn btn-primary btn-block btn-lg" type="click">Buy ticket</button>
         </div>
       </div>
     </div>
@@ -57,20 +76,20 @@
           <div class="panel-body">
             <div class="radio">
               <label>
-                <input type="radio" name="flavor" value="chocolate" checked>
-                Chocolate
+                <input type="radio" name="time" value="01:00 PM" checked>
+                01:00 PM
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="flavor" value="vanilla">
-                Vanilla
+                <input type="radio" name="time" value="04:00 PM">
+                04:00 PM
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="flavor" value="cookiesandcream">
-                Cookies & Cream
+                <input type="radio" name="time" value="07:00 PM">
+                07:00 PM
               </label>
             </div>
 
@@ -80,25 +99,28 @@
       <div class="col-md-4">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4>Avaliable Times</h4>
+            <h4>Your Age</h4>
           </div>
           <div class="panel-body">
             <div class="radio">
               <label>
-                <input type="radio" name="flavor" value="chocolate" checked>
-                Chocolate
+                <input type="radio" name="age" value="youth" checked>
+                Child/Youth
+                3-15
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="flavor" value="vanilla">
-                Vanilla
+                <input type="radio" name="age" value="adult">
+                Adult
+                16-64
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="flavor" value="cookiesandcream">
-                Cookies & Cream
+                <input type="radio" name="age" value="senior">
+                Senior
+                65+
               </label>
             </div>
 
@@ -107,9 +129,10 @@
       </div>
       <br>
       <div class="col-md-4">
-        <button class="btn-lg btn-block btn-primary" type="click">Confirm</button>
+        <button id="confirm" class="btn-lg btn-block btn-primary" type="click">Confirm</button>
       </div>
     </div>
+    <p><span id="price"><span></p>
   </div>
   </div>
 </body>
